@@ -1,0 +1,55 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1a1a1a;
+  padding: 10px 20px;
+  color: #fff;
+}
+
+.navbar-logo a {
+  text-decoration: none;
+  color: #ff4500;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.navbar-links a {
+  margin-left: 15px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+}
+
+.create-thread-btn {
+  background-color: #ff4500;
+  padding: 6px 12px;
+  border-radius: 5px;
+  color: #fff !important;
+}
+
+
+.navbar-username {
+  margin-right: 15px;
+  font-weight: bold;
+}
+
+.logout-btn {
+  margin-left: 10px;
+  padding: 5px 10px;
+  border: none;
+  background-color: #e74c3c;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  background-color: #c0392b;
+}
