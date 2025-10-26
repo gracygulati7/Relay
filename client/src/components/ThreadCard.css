@@ -1,107 +1,69 @@
-/* ThreadCard.css */
-
-/* Container for each thread */
-.thread-card {
+/* .thread-card {
   display: flex;
-  align-items: flex-start;
-  background: #ffffff;
-  border-radius: 16px;
-  padding: 18px 22px;
-  margin: 18px 0;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
-  transition: all 0.25s ease;
-  border: 1px solid #eae6e2;
-  font-family: "Inter", "Segoe UI", sans-serif;
+  background: #1a1a1a;
+  border-radius: 10px;
+  padding: 18px;
+  border: 1px solid #333;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+  transition: transform 0.2s ease, border-color 0.2s ease;
 }
 
 .thread-card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-  border-color: #d8cfc9;
+  border-color: #ff7f50;
 }
 
-/* Voting Section */
-.thread-card-votes {
+.vote-section {
+  text-align: center;
+  padding-right: 15px;
+  border-right: 1px solid #333;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  margin-right: 16px;
-  font-weight: 500;
-  color: #4b3f35;
+  justify-content: center;
+  min-width: 60px;
 }
 
-.thread-card-votes button {
-  background: #f4f1ee;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 16px;
-  padding: 5px 8px;
-  transition: background 0.2s ease;
+.vote-count {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ff7f50;
 }
 
-.thread-card-votes button:hover {
-  background: #e2dcd5;
+.vote-label {
+  font-size: 0.8rem;
+  color: #aaa;
 }
 
-.thread-card-votes span {
-  margin: 6px 0;
-  font-weight: 600;
-  font-size: 15px;
+.thread-content {
+  padding-left: 15px;
+  flex-grow: 1;
 }
 
-/* Main content area */
-.thread-card-content {
-  flex: 1;
-}
-
-.thread-card-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.thread-card-header h3 {
-  font-size: 1.3rem;
-  margin: 0;
-  color: #2b2b2b;
-}
-
-.thread-card-header h3 a {
+.thread-title a {
+  color: #fff;
   text-decoration: none;
-  color: inherit;
-  transition: color 0.2s ease;
+  font-size: 1.2rem;
+  font-weight: 600;
 }
 
-.thread-card-header h3 a:hover {
-  color: #7a5c38;
+.thread-title a:hover {
+  color: #ff7f50;
 }
 
-/* Category label */
-.thread-category {
-  background-color: #f1e8de;
-  color: #6a5134;
-  font-size: 13px;
-  padding: 4px 10px;
-  border-radius: 12px;
-  font-weight: 500;
+.thread-description {
+  color: #bbb;
+  margin: 8px 0 10px 0;
 }
 
-/* Description text */
-.thread-card-content p {
-  color: #3a3a3a;
-  font-size: 15px;
-  line-height: 1.6;
-  margin: 8px 0 12px;
-}
-
-/* Footer (creator + date) */
-.thread-footer {
+.thread-meta {
+  font-size: 0.9rem;
+  color: #888;
   display: flex;
-  justify-content: space-between;
-  font-size: 13px;
-  color: #777;
-  border-top: 1px solid #ece8e4;
-  padding-top: 8px;
-  margin-top: 8px;
+  flex-wrap: wrap;
+  gap: 5px;
 }
+
+.thread-meta .category {
+  color: #ff7f50;
+  font-weight: 500;
+} */

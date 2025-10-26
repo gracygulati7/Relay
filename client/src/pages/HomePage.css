@@ -1,26 +1,110 @@
 .home-container {
-  max-width: 900px;
-  margin: 30px auto;
+  padding: 40px 20px; /* reduce horizontal padding */
+  background-color: #0e0e0e;
+  color: #f5f5f5;
+  min-height: 100vh; /* keeps full screen, okay */
+  font-family: "Inter", sans-serif;
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* prevents horizontal scroll */
+}
+
+.page-title {
+  text-align: center;
+  color: #ff9900;
+  margin-bottom: 30px;
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+.filter-bar {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.search-input,
+.category-select {
+  padding: 10px 14px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  background: #1a1a1a;
+  color: white;
+  width: 250px;
+}
+
+.thread-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 25px;
+  margin-bottom: 50px; 
 }
 
 .thread-card {
-  background-color: #fff;
+  background-color: #1a1a1a;
+  border-radius: 10px;
   padding: 20px;
-  margin-bottom: 15px;
-  border-radius: 8px;
-  box-shadow: 0 1px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s, box-shadow 0.3s;
+  box-shadow: 0 0 10px rgba(255, 153, 0, 0.1);
 }
 
-.thread-card h3 {
+.thread-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 15px rgba(255, 153, 0, 0.3);
+}
+
+.thread-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
   margin-bottom: 10px;
-  color: #333;
 }
 
-.thread-card p {
-  margin: 5px 0;
+.thread-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #ff9900;
 }
 
-.thread-card a {
+.thread-title a {
+  color: #ff9900;
   text-decoration: none;
-  color: #0079d3;
+  font-size: 1.2rem;
+}
+
+.thread-title a:hover {
+  text-decoration: underline;
+}
+
+.thread-description {
+  margin: 10px 0;
+  color: #d3d3d3;
+}
+
+.thread-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+.comment-badge {
+  background: #ff9900;
+  color: #000;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-weight: bold;
+}
+
+.no-threads {
+  text-align: center;
+  color: #aaa;
 }
