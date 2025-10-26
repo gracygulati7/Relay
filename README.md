@@ -1,8 +1,8 @@
 # 🗨️ Online Discussion Forum (Threads API)
 
 This is a **basic project** for an Online Discussion Forum (like a mini StackOverflow/Reddit).
-Currently, it supports **CRUD operations for threads (create, read, update, delete), user authentication with protected routes, and view and add comments** 
-Later, you can extend it with **replies, upvotes/downvotes, search, and filters**.
+Currently, it supports **CRUD operations for threads (create, read, update, delete), user authentication with protected routes, view and add comments, search and filters** 
+Later, we would extend it with **user profile, replies and upvotes/downvotes**.
 
 ---
 
@@ -22,8 +22,8 @@ Later, you can extend it with **replies, upvotes/downvotes, search, and filters*
 1. **Clone the repo**
 
    ```bash
-   git clone <your-repo-link>
-   cd <project-folder>
+   git clone https://github.com/gracygulati7/Relay
+   cd Relay
    ```
 
 2. **Install dependencies**
@@ -35,18 +35,17 @@ Later, you can extend it with **replies, upvotes/downvotes, search, and filters*
 3. **Setup environment variables**
    Create a `.env` file in the project root:
 
-   ```
-  MONGO_URI=mongodb://localhost:27017/forumDB
+  ```
+  MONGO_URI=mongodb://localhost:27017/db-name
   PORT=5000
-  JWT_SECRET=supersecretkey123
-   ```
-
-   > Replace `mongodb://localhost:27017/discussion-forum` with your actual MongoDB connection string if using MongoDB Atlas.
+  JWT_SECRET=your-secret-key
+  ```
 
 4. **Run the server**
 
    ```bash
-   npm start
+   cd server
+   node index.js
    ```
 
    You should see:
@@ -56,6 +55,13 @@ Later, you can extend it with **replies, upvotes/downvotes, search, and filters*
    Server running on port 5000
    ```
 
+   **Run the frontend**
+
+   ```bash
+   cd client
+   npm start
+   ```
+   
 ---
 
 ## 📌 API Endpoints
@@ -205,4 +211,3 @@ Base URL: `http://localhost:5000/threads`
 **GET**  `/api/threads/:threadId/comments`
 
 ---
-
