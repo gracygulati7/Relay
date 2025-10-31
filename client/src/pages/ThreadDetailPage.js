@@ -4,7 +4,7 @@ import { getThreadById, updateThread, deleteThread, getComments, addComment } fr
 import "./ThreadDetailPage.css";
 
 function ThreadDetailPage() {
-  const { id } = useParams(); // must match :id in App.js
+  const { id } = useParams(); 
   const navigate = useNavigate();
 
   const [thread, setThread] = useState(null);
@@ -86,6 +86,11 @@ function ThreadDetailPage() {
       {!editing ? (
         <div className="thread-detail-card">
           <h2>{thread.title}</h2>
+<div className="thread-meta">
+  <span className="author">{thread.createdBy}</span>
+  <span className="dot">•</span>
+  <small>{new Date(thread.createdAt).toLocaleString()}</small>
+</div>
           <p>{thread.description}</p>
           <p><strong>Category:</strong> {thread.category}</p>
           <p><strong>Tags:</strong> {thread.tags.join(", ")}</p>
@@ -116,10 +121,13 @@ function ThreadDetailPage() {
 
         {comments.map((c) => (
           <div key={c._id} className="comment-card">
-            <p>{c.text}</p>
-            <p><strong>By:</strong> {c.author}</p>
-            <p><small>{new Date(c.createdAt).toLocaleString()}</small></p>
-          </div>
+  <div className="comment-header">
+    <span className="author">{c.author}</span>
+    <span className="dot">•</span>
+    <span>{new Date(c.createdAt).toLocaleString()}</span>
+  </div>
+  <p>{c.text}</p>
+</div>
         ))}
       </div>
     </div>

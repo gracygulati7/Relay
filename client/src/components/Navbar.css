@@ -2,54 +2,67 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #1a1a1a;
-  padding: 10px 20px;
+  background-color: #0e1117;
+  padding: 10px 25px;
   color: #fff;
+  border-bottom: 1px solid #1f2937;
+  font-family: 'Inter', sans-serif;
 }
 
 .navbar-logo a {
   text-decoration: none;
-  color: #ff4500;
-  font-weight: bold;
-  font-size: 24px;
+  color: #4ea1ff;
+  font-weight: 700;
+  font-size: 1.5rem;
+  letter-spacing: 0.5px;
 }
 
 .navbar-links {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 18px;
 }
 
 .navbar-links a {
-  margin-left: 15px;
   text-decoration: none;
-  color: #fff;
+  color: #e5e7eb;
   font-weight: 500;
+  transition: color 0.2s ease;
 }
 
-.create-thread-btn {
-  background-color: #ff4500;
-  padding: 6px 12px;
-  border-radius: 5px;
+.navbar-links a:hover {
+  color: #73b9ff;
+}
+
+.create-thread-btn,
+.logout-btn {
+  background-color: #4ea1ff !important;
   color: #fff !important;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 14px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
-
-.navbar-username {
-  margin-right: 15px;
-  font-weight: bold;
+.create-thread-btn:hover,
+.logout-btn:hover {
+  background-color: #73b9ff !important;
+  transform: translateY(-1px);
 }
 
 .logout-btn {
-  margin-left: 10px;
-  padding: 5px 10px;
-  border: none;
-  background-color: #e74c3c;
-  color: white;
-  border-radius: 4px;
-  cursor: pointer;
+  background-color: #334155 !important;
 }
 
 .logout-btn:hover {
-  background-color: #c0392b;
+  background-color: #475569 !important;
+}
+
+.navbar-username {
+  margin-right: 5px;
+  font-weight: 600;
+  color: #9ca3af;
 }
