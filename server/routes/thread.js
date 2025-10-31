@@ -2,7 +2,6 @@ const express = require('express');
 const router = express.Router();
 const Thread = require('../models/thread');
 
-// Create a new thread
 router.post('/', async (req, res) => {
     try {
         const { title, description, tags, category, createdBy } = req.body;
@@ -27,7 +26,6 @@ router.post('/', async (req, res) => {
     }
 });
 
-// Get all threads
 router.get('/', async (req, res) => {
     try {
         const threads = await Thread.find().sort({ createdAt: -1 });
@@ -38,7 +36,6 @@ router.get('/', async (req, res) => {
     }
 });
 
-// Update a thread
 router.put('/:id', async (req, res) => {
     try {
         const { id } = req.params;
@@ -61,7 +58,6 @@ router.put('/:id', async (req, res) => {
     }
 });
 
-// Delete a thread
 router.delete('/:id', async (req, res) => {
     try {
         const { id } = req.params;
@@ -79,7 +75,6 @@ router.delete('/:id', async (req, res) => {
     }
 });
 
-// Get single thread by ID
 router.get('/:id', async (req, res) => {
   try {
     const { id } = req.params;

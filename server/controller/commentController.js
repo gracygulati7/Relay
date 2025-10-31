@@ -1,7 +1,6 @@
 const Comment = require("../models/comment");
 const Thread = require("../models/thread");
 
-// Add a new comment to a thread
 exports.addComment = async (req, res) => {
   try {
     const { threadId } = req.params;
@@ -29,7 +28,6 @@ exports.addComment = async (req, res) => {
   }
 };
 
-// Get all comments for a thread
 exports.getCommentsByThread = async (req, res) => {
   try {
     const { threadId } = req.params;
